@@ -12,5 +12,5 @@ const FirstReverse=(str)=>{
 }
 
 console.log(
-    FirstReverse('How are you')
+    FirstReverse('I Love Code')
 )
