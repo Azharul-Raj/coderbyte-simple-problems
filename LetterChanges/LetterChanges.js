@@ -26,4 +26,27 @@ const LetterChanges = (str) => {
   }
   return newWord.join("");
 };
-console.log(LetterChanges("hello*3"));
+//ALTERNATIVES ARE
+AlternativeLetterChanges=(str)=>{
+    const letters=str.split("");
+    const modifiedString=[]
+    for(let i=0;i<letters.length;i++){
+        const char=letters[i];
+        // with i we are ignoring case
+        if(char.match(/[a-z]/i)){
+           let nextChar=String.fromCharCode(char.charCodeAt(0)+1);
+            if(nextChar =="{"){
+                nextChar='a'
+            }
+            if(nextChar.match(/[aeiou]/i)){
+                nextChar.toUpperCase()
+            }
+            modifiedString.push(nextChar)
+        }
+        else{
+            modifiedString.push(char)
+        }
+    }
+    return modifiedString.join("");
+}
+console.log(AlternativeLetterChanges("hello*3"));
