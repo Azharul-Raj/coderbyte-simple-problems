@@ -6,7 +6,7 @@ For the test cases, the range will be between 1 and 18 and the input will always
 
  */
 
-const firstFactorial=(num)=>{
+const FirstFactorial=(num)=>{
     let factorial=1;
     if(!num>0 && !num<19) return `Please provide a number between 1-18`;    
     for(let i=1;i<=num;i++){
@@ -14,4 +14,4 @@ const firstFactorial=(num)=>{
     }
     return factorial;
 }
-console.log(firstFactorial(4))
+console.log(FirstFactorial(4))
