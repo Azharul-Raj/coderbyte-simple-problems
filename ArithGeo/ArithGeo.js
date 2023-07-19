@@ -29,4 +29,5 @@ const ArithGeo=(arr)=>{
     if(Geometric) return `Geometric`
     return -1;
 }
-console.log(ArithGeo([2,4,16,24]))
+console.log(ArithGeo( [2,4,16,24]
+    ))
