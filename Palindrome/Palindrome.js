@@ -6,9 +6,9 @@ Punctuation and numbers will not be part of the string.
  */
 
 const Palindrome=(str)=>{
-    const modifiedStr=str.replace(/[^a-z]/ig,"");
+    const modifiedStr=str.replace(/[^a-z]/ig,"").toLowerCase();
     const reversedString=modifiedStr.split("").reverse().join("");    
     return modifiedStr===reversedString
 }
 
-console.log(Palindrome('never odd or even'))
+console.log(Palindrome('A man, a plan, a canal, Panama'))
