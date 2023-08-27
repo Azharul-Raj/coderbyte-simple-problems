@@ -12,6 +12,7 @@ const OtherProducts=(arr)=>{
     const newArr=[];
     for(let i=0;i<arr.length;i++){
         const otherArr=arr.slice(0,i).concat(arr.slice(i+1))
+        console.log(otherArr)
         newArr.push(otherArr.reduce((acc,curr)=>acc*curr))
     }
     return newArr.join("-")
