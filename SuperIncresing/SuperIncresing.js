@@ -7,16 +7,27 @@ it forms a superincreasing sequence. If a superincreasing sequence isn't formed,
 program should return the string "false
  */
 
-const Superincreasing=(arr)=>{
-    let   isSuperInc=true
-    for(let i=0;i<arr.length-1;i++){
-        const target=arr.pop();
-        const sum=arr.reduce((acc,curr)=>acc+curr);
-        if(sum>=target) {
-            isSuperInc=false
+// const Superincreasing=(arr)=>{
+//     let   isSuperInc=true
+//     for(let i=0;i<arr.length-1;i++){
+//         const target=arr.pop();
+//         const sum=arr.reduce((acc,curr)=>acc+curr);
+//         if(sum>=target) {
+//             isSuperInc=false
+//         }
+//     }
+//     return isSuperInc
+// }
+const Superincreasing = (arr) => {
+    let superInc = true;
+    for (let i = 0; i < arr.length; i++) {
+        const last = arr.pop();
+        const sum = arr.reduce((acc, curr) => acc + curr, 0)
+        if(sum>=last){
+            superInc=false
         }
     }
-    return isSuperInc
+    return superInc;
 }
-console.log(Superincreasing([1,2,3,4]
-    ))
+console.log(Superincreasing([1, 2, 3, 4]
+))
